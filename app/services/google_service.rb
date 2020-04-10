@@ -1,6 +1,6 @@
 class GoogleService
-  def map_info
-    get_json("/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=#{ENV['google_api_key']}")
+  def map_info(latitude, longitude)
+    get_json("/maps/api/directions/json?origin=1331+17th+St+Denver+CO&destination=#{latitude}+#{longitude}&key=#{ENV['google_api_key']}")
   end
 
   private

@@ -6,3 +6,10 @@
   <p>Fuel Type: <%= @station[:fuel_type_code] %></p>
   <p>Access Times: <%= @station[:access_days_time] %></p>
 </section>
+
+<section class="directions">
+  <br>
+  <p>Distance: <%= @google_map[:distance][:text] %></p>
+  <p>Travel Time: <%= @google_map[:duration][:text] %></p>
+  <p>Directions: <%= @google_map[:steps].last[:html_instructions] %></p>
+</section>
