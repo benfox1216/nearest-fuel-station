@@ -8,7 +8,10 @@ describe "As a user" do
       
       expect(current_path).to eq("/search")
       
-      
+      expect(page).to have_content("Nearest Station: Seventeenth Street Plaza")
+      expect(page).to have_content("Address: 1225 17th St. Denver CO")
+      expect(page).to have_content("Fuel Type: ELEC")
+      expect(page).to have_content("Access Times: MO: Not Specified; TU: Not Specified; WE: Not Specified; TH: Not Specified; FR: Not Specified; SA: Not Specified; SU: Not Specified")
     end
   end
 end
